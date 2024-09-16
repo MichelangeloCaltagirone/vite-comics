@@ -20,9 +20,10 @@
 </template>
 
 <style scoped>
-
-    h1 {
-        color:red
+    main {
+        background-color: black;
+        color: pink;
     }
+    
 
 </style>

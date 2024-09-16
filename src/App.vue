@@ -30,12 +30,8 @@
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @use "./styles/general.scss";
 
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
 
 </style>
