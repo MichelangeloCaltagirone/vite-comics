@@ -22,14 +22,20 @@
 
 <template>
 
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
-  
+    <div class="container">
+      <AppHeader />
+      <AppMain />
+      <AppFooter />
+    </div>
+
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  @use "./styles/general.scss";
 
-@use "./styles/general.scss"
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
 </style>
