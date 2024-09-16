@@ -5,7 +5,6 @@
   import AppFooter from './components/AppFooter.vue';
   import MainLinks from './components/MainLinks.vue';
 
-
  export default {
         data() {
             return {

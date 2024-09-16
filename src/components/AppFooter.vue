@@ -1,4 +1,6 @@
 <script>
+import footerBanner from '../components/AppFooterBanner.vue';
+
  export default {
         data() {
             return {
@@ -36,6 +38,9 @@
                     'DC Power Visa'
                 ]                
             }
+        },
+        components: {
+            footerBanner
         }
     }
 </script>
@@ -74,6 +79,8 @@
             <img id="footerDCLogo" src="../assets/img/dc-logo-bg.png" alt="DC logo">       
         </div>
     </footer>
+
+    <footerBanner />
 </template>
 
 <style scoped>
