@@ -71,6 +71,8 @@ img {
     display: flex;
     justify-content: space-around;
     color: white;
+    position: relative;
+    z-index: 1;
 
     div {
         display: flex;
