@@ -86,10 +86,11 @@ import ComicsCard from '../components/ComicsCard.vue';
 </script>
 
 <template>
+    <section id="mainJumbotron"></section>
     <main>
 
         <div class="container">
-            <h1>--> Contents Goes Here <--</h1>
+            
             <section class="comicsBookList">
                 <ComicsCard v-for="(comic, index) in comicsBooks" :key="index"
                 :picUrl="comic.thumb"
@@ -97,6 +98,8 @@ import ComicsCard from '../components/ComicsCard.vue';
                 :title="comic.series"
                 :bookType="comic.type" />
             </section>
+            <span>CURRENT SERIES</span>
+            <button id="btnLoadBookList">LOAD MORE</button>
             
         </div>   
 
@@ -110,14 +113,42 @@ import ComicsCard from '../components/ComicsCard.vue';
         color: pink;
         padding: 3rem;
         font-size: 20px;
+        
     }    
     .container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
     }
     .comicsBookList {
         display: flex;
         flex-wrap: wrap;
+    }
+    #mainJumbotron {
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-size: cover;
+        height: 250px;
+    }
+    span {
+        background-color: #0282F9;
+        color: white;
+        padding: 10px 25px;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        translate: 0 -50%;
+    }
+    #btnLoadBookList {
+        padding: 10px 40px;
+        background-color: #0282F9;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        display: block;
+        margin: 2rem auto 0 auto;
+
     }
 
 </style>
