@@ -25,6 +25,11 @@ export default {
                     },
                 ]
             }
+        },
+        methods: {
+            getImageUrl(picPath) {
+                return new URL(`../assets/img/${picPath}`, import.meta.url).href
+            }
         }
     }
 
@@ -37,7 +42,7 @@ export default {
     <div  class="container">
 
       <div v-for="link in mainLinks">
-         <img src="../assets/img/buy-comics-digital-comics.png" alt="{{ link.text }}">
+         <img :src="getImageUrl(link.picPath)" alt="{{ link.text }}">
          <a href="#">{{ link.text }}</a>
       </div>
 
