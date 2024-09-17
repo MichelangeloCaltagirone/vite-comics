@@ -1,9 +1,13 @@
 <script>
+import ComicsCard from '../components/ComicsCard.vue';
  export default {
         data() {
             return {
 
             }
+        },
+        components: {
+            ComicsCard
         }
     }
 
@@ -14,6 +18,7 @@
 
         <div class="container">
             <h1>--> Contents Goes Here <--</h1>
+            <ComicsCard />
         </div>   
 
     </main>
