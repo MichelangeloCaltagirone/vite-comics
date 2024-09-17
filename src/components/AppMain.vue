@@ -90,11 +90,14 @@ import ComicsCard from '../components/ComicsCard.vue';
 
         <div class="container">
             <h1>--> Contents Goes Here <--</h1>
-            <ComicsCard v-for="(comic, index) in comicsBooks" :key="index"
-            :picUrl="comic.thumb"
-            :price="comic.price"
-            :title="comic.series"
-            :bookType="comic.type" />
+            <section class="comicsBookList">
+                <ComicsCard v-for="(comic, index) in comicsBooks" :key="index"
+                :picUrl="comic.thumb"
+                :price="comic.price"
+                :title="comic.series"
+                :bookType="comic.type" />
+            </section>
+            
         </div>   
 
     </main>
@@ -107,11 +110,14 @@ import ComicsCard from '../components/ComicsCard.vue';
         color: pink;
         padding: 3rem;
         font-size: 20px;
-    }
-    
+    }    
     .container {
     max-width: 1200px;
     margin: 0 auto;
+    }
+    .comicsBookList {
+        display: flex;
+        flex-wrap: wrap;
     }
 
 </style>

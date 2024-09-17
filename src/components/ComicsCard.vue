@@ -21,14 +21,42 @@
                 type: String,
                 required: false
             }
+        },
+        metspands: { 
+            getImageUrl(picPath) {
+                return new URL(`../assets/img/${picPath}`, import.meta.url).href
+            }
         }
 
     }
 </script>
 
 <template>
-    <h1>{{ title }}</h1>
+    <article>
+        <div>
+            <img :src="picUrl" :alt="title">
+        </div>
+        
+        <span>{{ title.toUpperCase() }}</span>
+    </article>
+   
 </template>
 
 <style scoped>
+article {
+    flex-basis: calc(100% / 6);
+    padding: 0 10px;
+    div {
+        height: 150px;
+        margin: 1rem 0 1.5rem 0;
+    }
+    img {
+        width: 100%; 
+        max-height: 100%;
+    }
+    span {
+        font-size: 16px;
+        color: #FEFEFE;
+    }
+    }
 </style>
