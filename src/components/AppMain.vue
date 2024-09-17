@@ -148,7 +148,6 @@ import ComicsCard from '../components/ComicsCard.vue';
         font-weight: 500;
         display: block;
         margin: 2rem auto 0 auto;
-
     }
 
 </style>
